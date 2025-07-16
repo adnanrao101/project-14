@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,40 +8,142 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
+
 <body>
-    
+
 
     <!-- =========================navbar start========================= -->
-     <nav>
+    <nav>
         <div class="container">
             <div class="d1">
 
-            <i class="fa-solid fa-bars"></i>
-            <img id="img1" src="img/keep.png" alt="">
-            <a href="#"><h2>Keep</h2></a>
+                <i class="fa-solid fa-bars"></i>
+                <img id="img1" src="img/keep.png" alt="">
+                <a href="#">
+                    <h2>Keep</h2>
+                </a>
 
             </div>
-            
+
             <div class="d2">
-                <button id="btn1"><i class="fa-solid fa-search" id="btn-i"></i><input type="search" placeholder="Search"></button>
+                <button id="btn1"><i class="fa-solid fa-search" id="btn-i"></i><input type="search"
+                        placeholder="Search"></button>
             </div>
-            
+
             <div class="d3">
-            <a href="refresh"><i class="fa-solid fa-rotate-right" id="d3-i"></i></a>
-            <a href="list view"><i class="fa-solid fa-equals" id="d3-i"></i></a>
-            <a href="setting"><i class="fa-solid fa-gear" id="d3-i"></i></a>
+                <a href="refresh"><i class="fa-solid fa-rotate-right" id="d3-i"></i></a>
+                <a href="list view"><i class="fa-solid fa-equals" id="d3-i"></i></a>
+                <a href="setting"><i class="fa-solid fa-gear" id="d3-i"></i></a>
             </div>
-            
+
             <div class="d4">
-            <a href="googles app"><i class="fa-solid fa-grip" id="d4-i"></i></a>
-            <img id="img2" src="img/photo.png" alt="">
+                <a href="googles app"><i class="fa-solid fa-grip" id="d4-i"></i></a>
+                <img id="img2" src="img/photo.png" alt="">
             </div>
-                        
+
         </div>
-        
-     </nav>
+
+    </nav>
     <!-- =========================navbar start========================= -->
 
+    <section>
 
+        <div class="d5">
+            <div class="sidebar" id="sidebar">
+                <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+                <ul>
+                    <li><span class="icon">💡</span><span class="text">Notes</span></li>
+                    <li><span class="icon">🔔</span><span class="text">Reminders</span></li>
+                    <li><span class="icon">✏️</span><span class="text">Edit labels</span></li>
+                    <li><span class="icon">📥</span><span class="text">Archive</span></li>
+                    <li><span class="icon">🗑️</span><span class="text">Bin</span></li>
+                </ul>
+            </div>
+
+        </div>
+
+
+        <div class="d6">
+
+            <div class="note-container">
+                <div id="collapsed-note">
+                    <input type="text" class="note-input" placeholder="Take a note..." onclick="expandNote()" />
+                    <div class="collapsed-actions">
+                        <button onclick="expandNote()">New Note</button>
+                        <button onclick="alert('Drawing feature coming soon!')">New Note with Drawing</button>
+                        <button onclick="alert('Add image feature coming soon!')">New Note with Image</button>
+                    </div>
+                </div>
+
+                <div id="expanded-note" class="note-expanded-container">
+                    <input type="text" class="note-input" placeholder="Title" />
+                    <textarea class="note-input" rows="4" placeholder="Take a note..."></textarea>
+
+                    <div class="note-tools">
+                        <button title="Bold"><b>B</b></button>
+                        <button title="Italic"><i>I</i></button>
+                        <input type="color" title="Background Color" />
+                        <button title="Remind Me">🔔</button>
+                        <button title="Collaborate">👤</button>
+                        <button title="Add Image">🖼️</button>
+                        <button title="Archive">📥</button>
+
+                        <div class="menu-dropdown">
+                            <button class="menu-btn">⋮</button>
+                            <div class="menu-content">
+                                <button>Add Label</button>
+                                <button>Add Drawing</button>
+                                <button>Show Tick Boxes</button>
+                            </div>
+                        </div>
+
+                        <button title="Undo">↶</button>
+                        <button title="Redo">↷</button>
+                    </div>
+
+                    <div class="note-actions">
+                        <button class="btn" onclick="collapseNote()">Close</button>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="script.js"></script>
 </body>
+
 </html>
