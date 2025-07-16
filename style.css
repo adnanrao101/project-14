@@ -396,3 +396,71 @@ section{
 /* ---------------------- d6 --------------------- */
 
 /* ==========================main end============================== */
+
+
+
+
+
+
+
+/* Notes list display style */
+.notes-list {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.note-item {
+    background-color: #444;
+    color: white;
+    padding: 10px;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.note-item h4 {
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.note-item p {
+    font-size: 14px;
+}
+
+.note-item button {
+    margin-top: 6px;
+    padding: 3px 6px;
+    background-color: crimson;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* 🔁 Responsive Design */
+@media (max-width: 768px) {
+    .container, .d3, .d4 {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .d2 {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .note-container {
+        width: 90%;
+    }
+
+    .d5 {
+        display: none; /* hide sidebar on small screens */
+    }
+
+    .d6 {
+        width: 100%;
+    }
+}
